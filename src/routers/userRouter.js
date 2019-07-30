@@ -8,6 +8,7 @@ const fs = require('fs')
 const mailVerify = require('../email/nodemailer')
 const rootdir = path.join(__dirname , '/../..' )
 const photosdir = path.join(rootdir , '/upload/photos')
+const powrt = require('../config/port')
 
 const folder = multer.diskStorage(
     {
@@ -165,7 +166,7 @@ router.get('/users/profile/:username', (req,res) => {
             username : user.username,
             name : user.name,
             email : user.email,
-            profilePicture : `localhost:2019/users/avatar/${user.avatar}`
+            profilePicture : `localhost:${powrt}/users/avatar/${user.avatar}`
         })
 
     })

@@ -2,9 +2,10 @@ const express = require ('express')
 const mysql = require('mysql')
 const userRouter = require('./routers/userRouter')
 const taskRouter = require('./routers/taskRouter')
+const powrt = require('./config/port')
 
 const server = express()
-const port = 2019
+const port = powrt
 
 server.use(express.json())
 server.use(userRouter)
