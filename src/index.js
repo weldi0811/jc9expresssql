@@ -12,6 +12,10 @@ server.use(userRouter)
 server.use(taskRouter)
 
 
+server.get('/', (req,res) => {
+    res.send('halo')
+})
+
 server.listen(port, () => {
     console.log('sukses di' + port)
 })
