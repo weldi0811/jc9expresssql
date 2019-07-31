@@ -166,7 +166,7 @@ router.get('/users/profile/:username', (req,res) => {
             username : user.username,
             name : user.name,
             email : user.email,
-            profilePicture : `localhost:${powrt}/users/avatar/${user.avatar}`
+            profilePicture : `https://weldi9mysql.herokuapp.com/users/avatar/${user.avatar}`
         })
 
     })
